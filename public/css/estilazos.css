@@ -1,0 +1,249 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../css/fondito.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Georgia', serif;
+    color: #4b3e2b;
+    padding: 40px;
+}
+
+
+/* Contenedor general */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    background: #fffaf3;
+    border: 2px solid #e8d8c3;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(168, 134, 97, 0.2);
+    animation: fadeInContainer 0.6s ease-in-out;
+}
+
+/* Animación entrada */
+@keyframes fadeInContainer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título principal */
+h1, h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #6e4b2d;
+    text-shadow: 1px 1px #e0cbb4;
+}
+
+/* Botón crear */
+.btn-create {
+    display: inline-block;
+    background: #f4e0c1;
+    border: 2px solid #c5a97d;
+    color: #4b3e2b;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.btn-create:hover {
+    background: #e3c9a9;
+    border-color: #b3956c;
+    color: #3c2f1f;
+    transform: translateY(-2px);
+}
+
+/* Estilos de tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 15px;
+    box-shadow: 0 0 10px rgba(194, 163, 126, 0.1);
+}
+
+.table th {
+    background: #d6bfa7;
+    color: #3f2e1d;
+    padding: 14px;
+    font-size: 1rem;
+}
+
+.table td {
+    background: #fffaf3;
+    color: #4b3e2b;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ebddca;
+    font-size: 0.95rem;
+}
+
+.table tr:hover {
+    background: #f8ecde;
+}
+
+/* Botones de acción */
+.btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    border: none;
+    text-decoration: none;
+    color: white;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-show {
+    background-color: #9c7e5c;
+}
+
+.btn-show:hover {
+    background-color: #7a624a;
+}
+
+.btn-edit {
+    background-color: #c29f7e;
+}
+
+.btn-edit:hover {
+    background-color: #a67f5f;
+}
+
+.btn-delete {
+    background-color: #b05a4e;
+}
+
+.btn-delete:hover {
+    background-color: #8a3f35;
+}
+
+/* Formulario */
+form {
+    background: #fff6e8;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e5d1b8;
+    box-shadow: 0 0 10px rgba(210, 182, 146, 0.2);
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+    color: #5b422f;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+    border: 1px solid #d6c1a2;
+    border-radius: 8px;
+    background: #fffefc;
+    color: #4b3e2b;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+
+form input[type="text"]:focus,
+form textarea:focus {
+    border-color: #b38f6b;
+    outline: none;
+}
+
+/* Botón enviar */
+.btn-submit {
+    background: #bda382;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #a88c6c;
+    transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .table th, .table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .btn-create {
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+
+/* Mensaje sin datos */
+.no-data {
+    text-align: center;
+    padding: 40px;
+    color: #8a6e51;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+/* Separador decorativo */
+.decor-line {
+    height: 2px;
+    background: #e3c6a3;
+    margin: 25px 0;
+    opacity: 0.7;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #a1886f;
+}
+
+/* Animaciones suaves */
+.fade-in {
+    animation: fadeInSlow 1s ease-in-out;
+}
+
+@keyframes fadeInSlow {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
